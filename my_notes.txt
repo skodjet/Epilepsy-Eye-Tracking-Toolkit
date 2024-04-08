@@ -1,0 +1,70 @@
+General info:
+- Environment name = honors
+- 6 horizontal x 4 vertical apriltags after processing video (16 total) by default.
+- Anaconda packages are stored in C:\Users\rexsk\.conda\envs\honors\Lib\site-packages
+
+Notes on data output format:
+- CSV files:
+-- x1 and x2 are the left and right points of the AOI box
+
+***** __constants.py *****
+- IMPORTANT: total_surface_width and total_surface_height 
+are NOT the dimensions of the monitor. These are the dimensions 
+of the output video / the resolution of the Pupil Labs world camera.
+
+
+***** border_apriltags.py *****
+
+Command to run: python border_apriltags.py --name "path\to\pupil\video.mp4\file\here"
+
+If you receive an error like, error: unrecognized arguments: Research\000\000\world.mp4, 
+put the path to the mp4 file in quotes.
+
+Lines 34-38 (starting with project_directory = Path(__file__).parent.parent.parent) 
+were changed by me in order to work with Windows paths.
+
+cv2 needed to be imported for this file 
+(import opencv-contrib-python and pip install opencv-python with pip (I don't think conda install worked)).
+
+
+
+***** semi-automatic AOI selection (aoi_tracking.py) *****
+
+Command to run: python aoi_tracking.py --video="insert\path\to\apriltags\video.mp4\here"
+
+Lines 88-94 (starting with project_directory = Path(__file__).parent.parent.parent 
+were changed by me to work with Windows path names.
+
+
+
+***** Selection AOI (aoi_selection.py) *****
+
+Command to run: python aoi_selection.py --video="insert\path\to\apriltags\video.mp4\here" --start_frame=insert frame of first aoi here
+
+Stop the script by pressing q
+
+Lines 65-68 (starting with project_directory = Path(__file__).parent.parent.parent) were changed by me 
+and lines 71-72 were commented out.
+
+
+***** Overlay only AOIs (overlay_only_aois.py) *****
+
+Command to run: python overlay_only_aois.py --video="insert/path/to/video.mp4/here" --aois="insert/path/to/aois.csv/here"
+
+
+***** Overlay gaze position of a single participant (overlay_single_participant.py) *****
+
+
+
+Eli:
+python aoi_tracking.py --video="C:\Users\rexsk\Documents\Honors Research\E Data\003\world.mp4"
+
+
+Calvin:
+python aoi_tracking.py --video="C:\Users\rexsk\Documents\Honors Research\C_Data\C_Data\Second Trial\world.mp4"
+
+Ben:
+python aoi_tracking.py --video="C:\Users\rexsk\Documents\Honors Research\B_Data\B_Data\world.mp4"
+
+
+
