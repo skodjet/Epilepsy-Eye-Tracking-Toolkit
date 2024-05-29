@@ -1,0 +1,5 @@
+cleaned_files/*
+!cleaned_file/placeholder
+*.csv
+*.xslx
+*.idea
