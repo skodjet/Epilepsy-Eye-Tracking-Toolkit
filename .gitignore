@@ -1,0 +1,5 @@
+my_data_analysis/cleaned_files/*
+!my_data_analysis/cleaned_file/placeholder
+my_data_analysis/*.csv
+my_data_analysis/*.xslx
+my_data_analysis/*.idea
