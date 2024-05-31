@@ -1,3 +1,50 @@
+# This repository contains the python data processing and analysis code from Thomas Skodje's 2024 honors thesis project. Information for conducting experimentation is as follows
+
+This project was developed as part of Thomas Skodje’s honors thesis in spring 2024. It is
+designed for use with the Pupil Labs Core eye-tracking device. The full thesis with more details
+can be found here: https://etd.library.emory.edu/concern/etds/5m60qt45z?locale=en
+
+In order to administer the trials, first obtain a participant’s consent to undergo the trials. Inform
+them of the potential risks and benefits of undergoing the trial, and brief them on what they are
+about to see in the trials. These trials are designed to test memory capabilities in patients with
+epilepsy.
+
+Start by having the participant put on the Pupil Labs Core eye-tracking headset, and have them
+sit approximately 0.5 meters from the computer monitor (or any distance far enough to where
+the entire computer monitor fits comfortably within the eye-tracking device’s scene camera).
+Then, open the Pupil Capture software (included with the Pupil Labs Core device) and ensure
+that the participant’s pupils are being correctly tracked by performing calibration.
+After calibration is complete, open the “PracticeTrialPackage” package in Unity version
+2021.3.16f1 (described in the thesis, and not yet uploaded to this repository). 
+Tell the participant to look at the cross fixation on screen when it appears, and
+wherever they wish whenever a video is playing. Eye-tracking data from the practice trial should
+not be recorded. The practice trial consists of a 4-second fixation followed by a 5-second video
+clip, followed by another 4-second fixation, followed by a second 5-second video clip. Press play
+on the Unity scene when the participant is ready.
+
+After the participant completes the practice trial, open the “FirstTrialPackage” package in Unity
+version 2021.3.16f1. Repeat the same instructions from the practice trial to the participant. Data
+from this trial should not be recorded either. This trial consists of 15 alternating fixation and
+video pairs (similar to the practice trial, except with 15 fixation-video pairs as opposed to 2).
+Press play on the Unity scene when the participant is ready.
+
+After the participant completes the first trial, open the “SecondTrialPackage” package in Unity
+version 2021.3.16f1. Repeat the same instructions from the practice trial to the participant.
+During this trial, eye-tracking data should be recorded using the Pupil Capture software. This
+trial also consists of 15 alternating fixation and video pairs, but with the first, seventh, and
+twelfth scenes having objects added. Press play on the Unity scene when the participant is
+ready. Once the trial is completed, stop the recording and debrief the participant.
+After the participant has completed all the trials and has been debriefed, use the raw data
+exporter feature on Pupil Player to export the data from the participant’s recording to a .csv file.
+Use the data processing toolkit, which can be found in this repository to process the data.
+
+If you wish to upload any of your own videos or scenes to replace the default scenes in the
+practice trial, first trial, and second trial, simply place your desired 5-second videos in the
+“Videos” folder within each scene and update the data paths in the “play_vids” script in each
+Unity project to reflect the new video names. Please note that videos longer than 5 seconds may be truncated or
+produce errors.
+
+
 # This toolkit is an adapted version of Faraji's Dynamic AOI Toolkit. Below is the original README file from Faraji's toolkit.
 Citation: Faraji, Y., & van Rijn, J. W. (2024). Dynamic AOI Toolkit v1.2.0 (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.10535707
 
