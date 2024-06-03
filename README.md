@@ -2,7 +2,7 @@
 
 This project was developed as part of Thomas Skodje’s honors thesis in computer science during the spring of 2024 at 
 Emory University. It is designed for use with the Pupil Labs Core eye-tracking device. For the full thesis text with
-more details, please contact Thomas Skodje directly at thomas.skodje@gmail.com
+more details, please follow this link: [https://etd.library.emory.edu/concern/etds/5m60qt45z](https://etd.library.emory.edu/concern/etds/5m60qt45z)
 
 ## File Structure
 Unity Scenes contains the Practice Trial, First Trial, and Second Trial scenes in their respective folders.
